@@ -11,3 +11,5 @@ const productSchema = new mongoose.Schema({
     item_tax:Number,
     item_availability:Boolean
 })
+
+module.exports = mongoose.model('product',productSchema)
