@@ -19,7 +19,7 @@ router.get('/:id',async(req,res)=>{
         const product = await Product.find({id:req.params.id},{_id:0});
         return res.status(200).send(product);
     } catch (err) {
-        return res.status(500).send(err.message)
+        return res.status(404).send(err.message)
     }
 })
 
